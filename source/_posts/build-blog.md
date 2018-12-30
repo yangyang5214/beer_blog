@@ -89,7 +89,7 @@ server{
 service nginx start
 ```
 
-###　结束
+### 结束
 
 每次代码提交到 github 之后，执行 shell 脚本 . 
 
