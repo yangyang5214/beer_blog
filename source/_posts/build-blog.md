@@ -49,6 +49,8 @@ _drafts草稿文件，_posts发布的文章
 直接参考 
 
 https://github.com/theme-next/hexo-theme-next
+
+http://theme-next.iissnan.com/getting-started.html
 ```
 
 ###  修改配置
