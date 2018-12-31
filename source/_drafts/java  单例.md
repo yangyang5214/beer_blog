@@ -1,0 +1,209 @@
+---
+title: java  单例
+tags: java,设计模式
+notebook: 
+---
+
+### java  单例
+
+单例：在任何时间同一个jvm中只有一个实例。
+
+实现单例的方法是将构造函数私有化
+
+#### 懒汉式单例
+
+lazy loading . 可能存在多个访问者同时访问，并同时构造了多个对象的问题。
+```
+public class SingletonDemo{
+
+	private static SingletonDemo singleton;
+
+	private SingletonDemo{
+
+	}
+
+	public static SingletonDemo getIntance(){
+		if ( singleton == null ){
+			singleton = new SingletonDemo();
+		}
+		return singleton;
+	}
+
+}
+```
+
+
+#### 线程安全的懒汉式单例
+
+但是并发的情况不是很多，大多数时候这个锁占用额外的资源都浪费了
+
+```
+public class SingletonDemo{
+
+	private static SingletonDemo singleton;
+
+	private SingletonDemo{
+
+	}
+
+	public static synchronized SingletonDemo getIntance(){
+		if ( singleton == null ){
+			singleton = new SingletonDemo();
+		}
+		return singleton;
+	}
+
+}
+```
+
+
+#### 懒汉式(同步代码块)
+
+可能产生多个实例
+
+```
+public class SingletonDemo{
+
+	private static SingletonDemo singleton;
+
+	private SingletonDemo{
+
+	}
+
+	public static synchronized SingletonDemo getIntance(){
+		if ( singleton == null ){
+                    synchronized (SingletonDemo.class){}
+        		        	singleton = new SingletonDemo();
+                }   
+		}
+		return singleton;
+	}
+}
+```
+
+#### 饿汉单例（静态常量）
+
+```
+public class SingletonDemo{
+
+	private static final SingletonDemo singleton = new SingletonDemo();
+
+	private SingletonDemo{
+
+	}
+
+	public static SingletonDemo getIntance(){
+		return singleton;
+	}
+
+}
+```
+
+#### 饿汉单例 (静态代码块)
+
+```
+public class SingletonDemo{
+
+	private static SingletonDemo singleton;
+
+    static {
+        singleton = new SingletonDemo();
+    }
+
+	private SingletonDemo{
+
+	}
+
+	public static SingletonDemo getIntance(){
+		return singleton;
+	}
+
+}
+```
+
+#### 静态类内部单例
+
+静态内部内的好处是：静态内部类不会在单例类加载时候就加载，而是在调用  getInstance 方法时候才进行加载，达到了类似恶汉式单例的效果，而且是线程安全的。
+
+```
+public class SingletonDemo{
+
+	private static class SingletonInner(){
+	
+		private static SingletonDemo  singleton = new SingletonDemo();
+	
+	}
+
+	private SingletonDemo{
+
+	}
+
+	public static SingletonDemo getIntance(){
+		return SingletonInner.singleton();
+	}	
+
+}
+```
+
+
+#### 枚举
+
+```
+public enum SingletonDemo{
+    INSTANCE;
+    public void otherMethods(){
+        System.out.println("Something");
+    }
+}
+
+# 调用
+SingletonDemo.INSTANCE.otherMethods();
+```
+
+反编译
+```
+Compiled from "SingletonDemo.java"
+public final class SingletonDemo extends java.lang.Enum<SingletonDemo> {
+  public static final SingletonDemo INSTANCE;
+  public static SingletonDemo[] values();
+  public static SingletonDemo valueOf(java.lang.String);
+ 
+  public void otherMethods();
+ 
+  static {};
+}
+```
+
+好处：
+
+- 序列化问题
+- 线程安全
+- 保证只有一个实例
+
+
+### 双重校验锁法
+
+volatile 关键字
+```
+public class SingletonDemo implements Serializable {
+    private static volatile SingletonDemo instance;
+    private SingletonDemo(){
+        System.out.println("Singleton has loaded");
+    }
+    public static SingletonDemo getInstance(){
+        if(instance==null){
+            synchronized (SingletonDemo.class){
+                if(instance==null){
+                    instance=new SingletonDemo();
+                }
+            }
+        }
+        return instance;
+    }
+
+    
+    private Object readResolve() {
+        return singleton;
+    }
+}
+```

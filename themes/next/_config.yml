@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2018
 
 # icon between year and author @Footer
 authoricon: heart
@@ -47,11 +47,11 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories/
+  # categories: /categories/
   archives: /archives/
   tags: /tags/
-  sitemap: /sitemap.xml
-  commonweal: /404/
+  # sitemap: /sitemap.xml
+  # commonweal: /404/
   about: /about/
 
 
@@ -70,7 +70,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   about: user
-  # commonweal: heartbeat
+  commonweal: heartbeat
 
 
 # ---------------------------------------------------------------
@@ -91,8 +91,9 @@ scheme: Muse
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+  GitHub: https://github.com/yangyang5214
+  微博: https://weibo.com/u/6374622627
 
 # Social Links Icons
 # Icon Mapping:
@@ -127,8 +128,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/head.png
-
+avatar: https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/20181231090508.png
 # Table Of Contents in the Sidebar
 toc:
   enable: true
@@ -215,9 +215,9 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-#reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
+reward_comment: Look at your mood.
+wechatpay: /images/wechatpay.jpg
+alipay: /images/alipay.png
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
@@ -324,8 +324,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: beer
   count: true
 
 # Hypercomments
@@ -394,8 +394,8 @@ facebook_sdk:
   enable: false
   app_id:       #<app_id>
   fb_admin:     #<user_id>
-  like_button:  #true
-  webmaster:    #true
+  like_button:  false
+  webmaster:    false
 
 # Facebook comments plugin
 # This plugin depends on Facebook SDK.
