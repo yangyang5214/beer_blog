@@ -1,12 +1,15 @@
 ---
-title: chrome 插件记录
-tags: 随记
-notebook: 
+title: chrome 插件
+tags: [chrom,工具]
+date:  2018-12-31 12:00:00
+categories: 工具
 ---
 
 
 > 自己在用的插件记录
 
+
+<!--more-->
 
 ### [Isometric Contributions](https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien/related)
 
@@ -14,6 +17,8 @@ github 的贡献图变成 3D 展示
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/IsometricContributions.jpg
 )
+
+
 
 ### [octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 

@@ -2,6 +2,7 @@
 title: 搭建blog
 tags: [工具]
 date: 2018-12-30 20:00:00
+categories: 工具
 ---
 
 > beer 个人网站历程
@@ -9,6 +10,8 @@ date: 2018-12-30 20:00:00
 1. 提交在github, 然后java解析网页。直接采用github 的 md 格式，前端采用vue 实现
 2. 也是提交在github,  使用 vscode  enermokey 插件写，同步到印象笔记（ps:印象笔记办了会员）
 3.  hexo 自己搭建 （ps:服务器，域名什么的，买了不用不白瞎了），印象笔记白瞎就白瞎了吧！
+
+<!--more-->
 
 ### git and npm 
 ```
