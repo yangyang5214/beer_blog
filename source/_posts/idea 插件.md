@@ -20,8 +20,6 @@ Adds a new action 'SerialVersionUID' in the generate menu (alt + ins). The actio
 项目右键 ——>new  ——> .ignore file ——> 根据语言选择模板
 ### lombok
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/JVtjVAGe2hldSrcUl6R6KicLremP80Pia5FITRboJA8iae7ibp1hpjovmiaPdqQNLtzibO9T7icsgjHQxDPHyTTzNXxsA/640?tp=webp&wxfrom=5&wx_lazy=1)
-
 生成  get   set  equals  canEqual 等方法
 
 ### GsonFormat
