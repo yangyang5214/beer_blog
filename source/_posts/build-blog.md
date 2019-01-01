@@ -47,10 +47,12 @@ hexo g  打包之后生成的静态文件
 _drafts草稿文件，_posts发布的文章
 ```
 -  themes
+
+我选的是 next 
 ```
 模板
 
-直接参考 
+直接参考,写的很详细，全都有
 
 https://github.com/theme-next/hexo-theme-next
 

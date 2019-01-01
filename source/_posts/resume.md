@@ -20,6 +20,8 @@ categories: 简历
 - 期望职位：java开发
 - 期望城市：不限
 
+<!--more-->
+
 ## 技能清单
 - 扎实的 JAVA 基础
 - 熟练运用 SSH/M，jercy ，swagger
