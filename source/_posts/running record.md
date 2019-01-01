@@ -17,6 +17,8 @@ categories: 健身
 |3      | 2018.12.16     |   150.3    |  5.37          | 周末 | 
 | 4 5  | 2018.12.18     |   150.6    |  10.11        | double five| 
 | 6 7  |2018.12.18     |   150.4    |  10.7           | double five| 
+| 8 9 10 11 |2019.01.01     |   150    |  19           | 19km,算四次吧 1km 忽略| 
+
 <!--more-->
 
 ### 2018.12.12
@@ -38,3 +40,6 @@ categories: 健身
 
 ### 2018.12.28
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/keep/20181228.jpg)
+
+### 2019.01.01
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/keep/20190101124655.jpg)
