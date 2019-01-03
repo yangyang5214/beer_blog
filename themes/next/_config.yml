@@ -217,8 +217,8 @@ post_wordcount:
 
 # Reward
 reward_comment: Look at your mood.
-wechatpay: /images/wechatpay.png
-# alipay: /images/alipay.png
+wechatpay: https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/wechatpay.jpg
+# alipay: https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
