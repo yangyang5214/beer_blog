@@ -24,7 +24,7 @@ categories: 简历
 
 ## 技能清单
 - 扎实的 JAVA 基础
-- 熟练运用 SSH/M，jercy ，swagger
+- 熟练运用 SSH/M，jersey ，swagger
 - 精通 IDEA，maven , git , tomcat 的使用 
 - 熟练使用 mysql , 了解 redis 
 - 熟悉 Linux平台 (日常开发 ubuntu) , 熟悉常见命令, bash 脚本等
