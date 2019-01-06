@@ -33,8 +33,6 @@ categories: 工具
 
 [WEB-INF下文件夹说明](http://help.finereport.com/doc-view-1912.html)
 
-核心就是这三个
-
 ### 直接集成 tomcat 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/20190106163352.png)
 
@@ -120,7 +118,7 @@ pom 文件
 [gtihub finereport_10](https://github.com/yangyang5214/finereport/tree/master/finereport_10)
 
 
-如果想直接运行我的模板，需要自己定义数据集（mysql 连接，替换 embed 文件家）. city 表在 finereport_10\src\main\resources\db 目录下。
+如果想直接运行我的模板，需要自己定义数据集（mysql 连接，替换 embed 文件夹）. city 表在 finereport_10\src\main\resources\db 目录下。
 
 
 ### jar包  pom 文件引入
