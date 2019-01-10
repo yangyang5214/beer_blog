@@ -1,15 +1,12 @@
 ---
 type: "photos"
-comments: "false"
+comments: false
 ---
 
 
 <link rel="stylesheet" href="../lib/album/ins.css">
 <link rel="stylesheet" href="../lib/album/photoswipe.css"> 
 <link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> 
-<div class="photos-btn-wrap">
-    <a class="photos-btn active" href="javascript:void(0)">Photos</a>
-</div>
 <div class="instagram itemscope">
     <a href="https://hexianwei.com" target="_blank" class="open-ins">图片正在加载中…</a>
 </div>
