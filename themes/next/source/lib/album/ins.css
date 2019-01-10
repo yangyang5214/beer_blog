@@ -1,6 +1,9 @@
 #post-instagram{
 	padding: 30px;
 }
+figure {
+    margin: 0;
+}
 #post-instagram .article-entry{
 	padding-right: 0;
 }
@@ -9,7 +12,12 @@
 	min-height: 500px;
 }
 .instagram img {
-	width: 100%;
+    width: 100%;
+    
+}
+.posts-expand .post-body img {
+    padding: 0;
+    border : 0;
 }
 .instagram .year {
 	font-size: 16px;
@@ -26,12 +34,13 @@
 }
 .instagram .thumb {
 	width: 25%;
-	height: 0;
+	height: 0; 
 	padding-bottom: 25%;
 	position: relative;
 	display: inline-block;
 	text-align: center;
 	background: #ededed;
+	outline: 1px solid #ddd;
 }
 .instagram .thumb a {
 	position: relative;
@@ -120,7 +129,7 @@
 	padding: 5px 8px 3px;
 }
 .photos-btn.active {
-	color: #08c;
+	color: #999999;
 	border: 1px solid #e5e5e5;
 	border-bottom: 5px solid #fff;
 }
