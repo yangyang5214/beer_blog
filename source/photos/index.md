@@ -1,5 +1,4 @@
 ---
-title: Photos
 type: "photos"
 comments: "false"
 ---
