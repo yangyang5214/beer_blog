@@ -120,10 +120,3 @@ pom 文件
 
 如果想直接运行我的模板，需要自己定义数据集（mysql 连接，替换 embed 文件夹）. city 表在 finereport_10\src\main\resources\db 目录下。
 
-
-### jar包  pom 文件引入
-
-> maven 管理项目，所以没必要建立lib目录。将 fr 的包放在maven本地仓库即可，然后pom 文件引入
-
-后续更新。。。。太晚了，撤了
-
