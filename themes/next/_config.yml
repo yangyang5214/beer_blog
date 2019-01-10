@@ -53,7 +53,7 @@ menu:
   # sitemap: /sitemap.xml
   # commonweal: /404/
   about: /about/
-
+  photos: /photos/
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -70,6 +70,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   about: user
+  photos: photo
   commonweal: heartbeat
 
 
