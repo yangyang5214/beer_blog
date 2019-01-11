@@ -118,8 +118,8 @@
           var liTmpl = "";
           for (var i = 0, len = data.link.length; i < len; i++) {
 			
-            var minSrc = 'https://beer-1256523277.cos.ap-shanghai.myqcloud.com/photos/' + data.link[i];
-            var src = 'https://beer-1256523277.cos.ap-shanghai.myqcloud.com/min_photos/' + data.link[i];
+            var minSrc = 'https://beer-1256523277.cos.ap-shanghai.myqcloud.com/min_photos/' + data.link[i];
+            var src = 'https://beer-1256523277.cos.ap-shanghai.myqcloud.com/photos/' + data.link[i];
 			var type = data.type[i];
             var target = src;// + (type === 'video' ? '.mp4' : '.jpg');
 
