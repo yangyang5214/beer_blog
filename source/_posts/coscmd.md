@@ -18,6 +18,8 @@ pip3 install coscmd
 pip3 install coscmd -U
 ```
 
+<!--more-->
+
 ### 配置
 
 ```

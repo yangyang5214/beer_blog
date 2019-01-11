@@ -13,6 +13,8 @@ categories: 工具
 效果图：
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/20190111145242.png)
 
+<!--more-->
+
 ### python 脚本
 
 基本上都是直接参考的，我一直在用腾讯的cos，所以后面的 python 代码改了点东西。基本流程
@@ -98,7 +100,7 @@ def git_operation():
 
 cos有shell 命令，自己结合改一下(我执行的是 cosupload 自定义了脚本，可以返回图片上传之后的url)
 
-参考：
+传送：https://www.hexianwei.com/2018/12/30/coscmd/
 - 5、部署
 
 我这边是执行了一个脚本（blog shell）。其实就是登陆到服务器，然后 git pull && hexo g
