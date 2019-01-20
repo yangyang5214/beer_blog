@@ -2,7 +2,6 @@
 title: 搭建blog
 tags: [工具]
 date: 2018-12-30 20:00:00
-categories: 工具
 ---
 
 > beer 个人网站历程

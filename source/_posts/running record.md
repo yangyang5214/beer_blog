@@ -2,7 +2,6 @@
 title: running record
 tags: [随记,跑步]
 date: 2018-12-31 20:00:00
-categories: 健身
 ---
 
 > 跑步记录
