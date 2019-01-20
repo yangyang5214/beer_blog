@@ -2,7 +2,6 @@
 title: xclip -sel clip
 tags: [linux]
 date: 2018-12-31 20:00:00
-categories: linux
 ---
 
 

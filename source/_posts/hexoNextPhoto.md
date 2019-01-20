@@ -1,8 +1,7 @@
 ---
 title: hexo next photo cos
-tags: [hexo,next]
+tags: [hexo,next,工具]
 date: 2019-01-11 14:00:00
-categories: 工具
 ---
 
 > 参考 ：https://www.jianshu.com/p/7f6425b3ffb2

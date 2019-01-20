@@ -1,8 +1,7 @@
 ---
 title: chrome 插件
-tags: [chrom,工具]
+tags: [工具]
 date:  2018-12-31 12:00:00
-categories: 工具
 ---
 
 
