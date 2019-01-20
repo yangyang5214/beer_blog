@@ -4,8 +4,9 @@ date: 2019-01-20 17:37:31
 tags: hexo
 ---
 
-> 发现 local_search 不能用了
+> 发现 local_search 不能用了
 
+<!--more-->
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/search_error.png
 )
 
@@ -29,5 +30,5 @@ hexo g 打包之后的文件夹是 public ,找到 search.xml 文件。定位到�
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/201901201822.png
 )
 
-正则匹配找到特殊字符。修改即可。
+正则匹配找到特殊字符。修改即可。
 
