@@ -36,4 +36,5 @@ is-a的关系
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/20190122003315.png
 )
 
-- 
+- Simple Association:
+

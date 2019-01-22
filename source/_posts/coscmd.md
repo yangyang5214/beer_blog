@@ -69,11 +69,11 @@ Info with : https://test-1111111.cos.ap-shanghai.myqcloud.com/jiang/test.jpg
 
 ### 自定义 coscmd upload(cosupload)
 
-
 使用coscmd upload 之后没有返回 url ，在这边我是想上传成功之后返回  url .
 
 
 创建脚本文件 cosupload
+
 
 ```shell
 #!/bin/bash
@@ -109,6 +109,15 @@ chmod +x cosupload
 # 调用  
 cosupload local_path cos_path
 ```
-
-
 上传成功之后，命令在剪贴板，然后直接粘贴。
+
+- ubuntu
+```
+# url 复制到剪贴板
+echo $url | xclip -sel clip
+```
+- mac
+```
+# url 复制到剪贴板
+echo $url | pbcopy
+```
