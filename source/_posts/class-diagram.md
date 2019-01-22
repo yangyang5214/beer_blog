@@ -5,8 +5,7 @@ tags:
 ---
 
 
-> [startUML](https://blog.csdn.net/sam_shan/article/details/80585240)
-### class notation
+### what is class UML
 
 - class name 
 
