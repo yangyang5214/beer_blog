@@ -54,6 +54,7 @@ menu:
   # commonweal: /404/
   about: /about/
   photos: /photos/
+  travel: /travel/
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -71,6 +72,7 @@ menu_icons:
   sitemap: sitemap
   about: user
   photos: photo
+  travel: plane
   commonweal: heartbeat
 
 
