@@ -55,6 +55,8 @@ menu:
   about: /about/
   photos: /photos/
   travel: /travel/
+  vlog: /vlog/
+
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -73,6 +75,7 @@ menu_icons:
   about: user
   photos: photo
   travel: plane
+  vlog: video-camera
   commonweal: heartbeat
 
 
