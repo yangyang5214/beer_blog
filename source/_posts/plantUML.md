@@ -104,7 +104,7 @@ Car <|.. Benz
 @enduml
 ```
 
-- 组合
+- 组合
 
 有生命周期的关系（组合模式）
 
@@ -142,7 +142,7 @@ Company <--* ConcreteCompany
 
 - 聚合
 
-一对多的关系（关联关系的一部分，非常强的关联关系）
+一对多的关系（关联关系的一部分，非常强的关联关系）
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/Aggregation.png
 )
