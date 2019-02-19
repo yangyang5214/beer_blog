@@ -6,8 +6,8 @@ import json
 import ast
 from datetime import datetime
 
-blog_path = '/home/beer/beer_blog'
-data_path = '/home/beer/beer_blog/themes/next/source/lib/album/data.json'
+blog_path = '/Users/beer/code/beer_blog'
+data_path = '/Users/beer/code/beer_blog/themes/next/source/lib/album/data.json'
 
 cos_img = '/photos/'
 cos_im_img = '/min_photos/'
