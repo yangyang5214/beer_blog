@@ -1,5 +1,5 @@
 ---
-title: java类加载顺序
+title: java类加载
 date: 2019-02-20 09:47:44
 tags:
 ---
@@ -14,6 +14,8 @@ tags:
 ```
 
 [java类加载器](https://www.hexianwei.com/2019/02/20/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/)
+
+<!--more-->
 
 - 链接
 ```

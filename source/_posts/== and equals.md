@@ -16,14 +16,14 @@ object 是所有类的基类
 
 默认是比较的内存地址，和  ==  一样
 
-···
+```
 public class Object{
 
     public boolean equals(Object obj) {
         return (this == obj);
     }
 }
-···
+```
 
 
 <!--more-->
