@@ -26,12 +26,14 @@ bootstrap class loader :加载 java 的核心库。
 extension class loader : 用来加载java的扩展库。java虚拟机的实现会提供一个扩展目录。该类加载器在此目录里面查找并加载java类
 ```
 - 系统类加载器
-```
+
 system(App) class loader : 根据java 应用的类路径（classpath）来加载java类
+
 ```
 父类为  ExtClassLoader
 ```
 - 自定义加载器
+
 ```
 父类为 AppClassLoader
 ```
@@ -53,4 +55,4 @@ todo
 
 ### 双亲委托
 
-![加载类过程](https://img-blog.csdn.net/20161116230421561)
+[加载类过程](https://img-blog.csdn.net/20161116230421561)
