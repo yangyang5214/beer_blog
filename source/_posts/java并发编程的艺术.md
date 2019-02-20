@@ -10,4 +10,7 @@ tags: java
 ![我也不知道啊，怎么整折磨脏](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/java并发编程的艺术.png
 )
 
+<!--more-->
 ### 4. 线程
+
+https://www.hexianwei.com/2019/01/22/%E7%BA%BF%E7%A8%8B/
