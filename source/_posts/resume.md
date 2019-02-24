@@ -102,6 +102,7 @@ https://www.hexianwei.com
 - pyhton 脚本实现图片的缩略图剪裁，以及data.json数据的整理（存放图片链接的json文件）
 - shell 脚本上传图片到腾讯cos,以及网站的打包发布
 
+
 ## 致谢
 
 感谢您花时间阅读我的简历，期待能有机会和您共事。
