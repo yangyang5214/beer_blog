@@ -33,6 +33,9 @@ tags: [java,spring]
 
 事务A开始读取，事务B提交，事务A再读取，发现数据不一致
 
+
+<!--more-->
+
 ### Mysql 事务隔离级别
 
 #### Read Uncommitted（读取未提交内容）
