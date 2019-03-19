@@ -383,4 +383,77 @@ PUT beer/_mapping/travel/
 - _type
 - _id
 
+### document_id
+
+#### 手动指定 document_id 
+
+一般来说，是从其他系统导入进来的时候，进行设置。
+
+#### 自动生成 document_id 
+
+```
+POST /index/id
+
+自动生成 document_id（20位） GUID(全局唯一标示)
+```
+
+### 并发冲突的问题
+
+#### 悲观锁
+
+#### 乐观锁
+
+基于 _version 元数据，实现乐观锁
+
+分布式的 shard => replica ,去多线程更新时，如果  version 大的先到的，先修改，后到的 version 小的直接舍弃。
+
+
+### partial update 
+```
+POST /index/type/id?_update
+{
+  "doc":{
+      //需要 update 的字段
+  }
+}
+```
+1、所有的查询、修改 and 写回操作，都发生在es的一个 shard 内部，避免了网路传输的开销
+2、减少了查询和修改的时间间隔，有效减少并发冲突的情况
+
+### 批量操作
+
+#### _mget
+```
+POST /_mget
+{
+  "docs":{
+     "_index": index,
+     "_type": type,
+     "_id": 1
+  },
+  "docs":{
+  "_index": index,
+     "_type": type,
+     "_id": 2
+  },
+}
+```
+
+```
+# 同一个index
+POST /index/_mget
+{
+  "docs":{
+     "_type": type,
+     "_id": 1
+  },
+  "docs":{
+     "_type": type,
+     "_id": 2
+  },
+}
+```
+
+#### _bulk
+
 
