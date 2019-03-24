@@ -1,7 +1,7 @@
 ---
 title: github ssh 
 tags: 工具
-notebook: 
+date:  2019-01-07 16:00:00
 ---
 
 > [Connecting to GitHub with SSH
