@@ -1,7 +1,7 @@
 ---
 title: java类加载
 date: 2019-02-20 09:47:44
-tags:
+tags: java
 ---
 
 开发中的 ClassNotFoundExcetpion 。
