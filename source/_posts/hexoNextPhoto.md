@@ -1,6 +1,6 @@
 ---
 title: hexo next photo cos
-tags: [hexo,next,工具]
+tags: 工具
 date: 2019-01-11 14:00:00
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: xclip -sel clip
-tags: [linux]
+tags: [shell]
 date: 2018-12-31 20:00:00
 ---
 

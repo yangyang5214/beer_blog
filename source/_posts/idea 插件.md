@@ -1,6 +1,6 @@
 ---
 title: idea 插件
-tags: [idea,插件,工具]
+tags: 工具]
 date: 2018-12-30 20:00:00
 ---
 
