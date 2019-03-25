@@ -17,3 +17,13 @@ tags: 随记
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast/breakfast_20190325.jpeg
 )
+
+
+### 手抓饼
+
+**2019.03.26**
+
+手抓饼  + 两个蛋  + 生菜
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast/breakfast_20190326.jpeg
+)
