@@ -54,7 +54,6 @@ menu:
   # commonweal: /404/
   about: /about/
   photos: /photos/
-  travel: /travel/
   vlog: /vlog/
 
 
@@ -74,7 +73,6 @@ menu_icons:
   sitemap: sitemap
   about: user
   photos: photo
-  travel: plane
   vlog: video-camera
   commonweal: heartbeat
 
