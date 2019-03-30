@@ -30,3 +30,15 @@ tags: 随记
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast/breakfast_20190326.jpeg
 )
+
+### 辣椒鸡蛋
+
+2019-03-30 勇士 - 森林狼
+
+两加时。库里两个三分带入悬念。勇士落败。裁判抢戏。。。0.5 秒吹个犯规。
+
+
+在连续说库里牛逼的时候，最后只能说裁判牛逼。
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast_20190330.jpg
+)
