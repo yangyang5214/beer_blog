@@ -113,9 +113,9 @@ def cosupload_operation(file_name, im_file_name):
     """
     cosupload 上传到 腾讯cos
     """
-    print("cosupload" + " " + file_name + " " + cos_img + file_name)
-    os.system("cosupload" + " " + file_name + " " + cos_img + file_name)
-    os.system("cosupload" + " " + im_file_name + " " + cos_im_img + file_name)
+    print("sudo cosupload" + " " + file_name + " " + cos_img + file_name)
+    os.system("sudo cosupload" + " " + file_name + " " + cos_img + file_name)
+    os.system("sudo cosupload" + " " + im_file_name + " " + cos_im_img + file_name)
 
 
 def blog_operation():
