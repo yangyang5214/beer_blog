@@ -15,7 +15,7 @@ tags: java
 
 - Near Realtime (NRT):近实时。
 ```
-1. 从写入到读取妙级
+1. 从写入到读取妙级∂
 2. 基于es搜索和分析可以达到妙级
 ```
 
@@ -455,5 +455,3 @@ POST /index/_mget
 ```
 
 #### _bulk
-
-
