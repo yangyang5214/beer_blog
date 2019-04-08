@@ -67,7 +67,7 @@ params = params + ",,,,,,"(注意没有空格)
 ```
 
 
-结果不一行呀，所以，以至于后面代码出现了数组了数组下标越界的异常。
+结果不一样呀，所以，以至于后面代码出现了数组了数组下标越界的异常。
 
 #### 问题分析
 
@@ -79,7 +79,7 @@ public String[] split(String regex) {
 ```
 
 
-直接看 if (limit == 0)。如果后面的都是 空，则 执行 resultSize--，后面进行字符串的截取。
+直接看 if (limit == 0)。如果后面的都是 空，则 执行 resultSize - -，后面进行字符串的截取。
 ```
 public String[] split(String regex, int limit) {
         /* fastpath if the regex is a
