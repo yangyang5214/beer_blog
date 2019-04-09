@@ -11,3 +11,4 @@ tags: [list,2019]
 - [ ] NestedResult 多关键字循环展示
 - [ ] (A#B)&C&(D#F) & 逻辑并  # 逻辑或c
 - [ ]  list 转 json (行业数为例子)
+- [ ]  sql between and 交换值
