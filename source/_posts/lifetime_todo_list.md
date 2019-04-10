@@ -1,8 +1,7 @@
 ---
-layout: lifetime todo list 
-title: list
+title: lifetime todo list 
 date: 2019-04-10 23:33:32
-tags:
+tags: [随记,list]
 ---
 
 
