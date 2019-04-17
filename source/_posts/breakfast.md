@@ -42,3 +42,10 @@ tags: 随记
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast_20190330.jpg
 )
+
+### 手抓饼 and 鸡蛋
+
+吃了好几天了，挺好吃的
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/20190417.jpeg
+)
