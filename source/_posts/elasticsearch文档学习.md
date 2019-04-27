@@ -1,5 +1,5 @@
 ---
-title: elasticsearch文档学习
+title: Java REST Client 文档学习
 date: 2019-04-22 22:23:29
 tags: elasticsearch,java
 ---
@@ -14,7 +14,6 @@ tags: elasticsearch,java
 <!--more-->
 
 ## [RestClient](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-low.html)
-
 
 
 ### 依赖
@@ -144,3 +143,131 @@ int statusCode = response.getStatusLine().getStatusCode();
 //返回的结果集
 String responseBody = EntityUtils.toString(response.getEntity());
 ```
+
+
+### Timeouts
+
+setRequestConfigCallback
+
+//连接设置为 5秒，默认为 1 秒
+setConnectTimeout(5000)
+
+//socket 设置为 60000，默认为 30 秒
+setSocketTimeout(60000))
+
+- setConnectTimeout : 表示建立连接的超时时间
+- setSocketTimeout : 表示连接上之后，获取 response 返回的等待时间
+
+传送门：https://www.hexianwei.com/2019/04/27/timeout/
+
+```
+@Bean
+    public RestClient getRestClient() {
+        final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
+        credentialsProvider.setCredentials(AuthScope.ANY,
+                new UsernamePasswordCredentials(username, password));
+        RestClient restClient = RestClient.builder(
+                new HttpHost(host, port, "http"))
+                .setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider))
+                .setRequestConfigCallback(requestConfigBuilder -> requestConfigBuilder
+                        .setConnectTimeout(5000)
+                        .setSocketTimeout(60000))
+                .build();
+        return restClient;
+    }
+```
+### Number of threads
+
+设置异步调用时候的线程池的大小。默认为 系统的 处理器=数量。
+```
+/**
+ * Returns the number of processors available to the Java virtual machine.
+ */
+public void getAvailableProcessors(){
+    int num = Runtime.getRuntime().availableProcessors();
+    System.out.println(num);
+}
+
+# 结果
+4
+```
+
+设置
+```
+@Bean
+public RestClient getRestClient() {
+    final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
+    credentialsProvider.setCredentials(AuthScope.ANY,
+            new UsernamePasswordCredentials(username, password));
+    RestClient restClient = RestClient.builder(
+            new HttpHost(host, port, "http"))
+            .setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider))
+            .setRequestConfigCallback(requestConfigBuilder -> requestConfigBuilder
+                    .setConnectTimeout(5000)
+                    .setSocketTimeout(60000))
+            .setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder
+                    .setDefaultIOReactorConfig(IOReactorConfig
+                            .custom()
+                            .setIoThreadCount(2)
+                            .build()))
+            .build();
+    return restClient;
+```
+
+查看源码，默认值为 **Runtime.getRuntime().availableProcessors();**
+
+```
+public static int getDefaultMaxIoThreadCount() {
+     return DefaultMaxIoThreadCount > 0 ? DefaultMaxIoThreadCount : Runtime.getRuntime().availableProcessors();
+}
+```
+
+
+### basic authenticationedit
+
+设置同户名密码，之前的代码有设置
+
+```
+final CredentialsProvider credentialsProvider =
+    new BasicCredentialsProvider();
+credentialsProvider.setCredentials(AuthScope.ANY,
+    new UsernamePasswordCredentials("user", "password"));
+
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder
+                .setDefaultCredentialsProvider(credentialsProvider);
+        }
+    });
+```
+### Encrypted communication 加密通信
+
+```
+KeyStore truststore = KeyStore.getInstance("jks");
+try (InputStream is = Files.newInputStream(keyStorePath)) {
+    truststore.load(is, keyStorePass.toCharArray());
+}
+SSLContextBuilder sslBuilder = SSLContexts.custom()
+    .loadTrustMaterial(truststore, null);
+final SSLContext sslContext = sslBuilder.build();
+RestClientBuilder builder = RestClient.builder(
+    new HttpHost("localhost", 9200, "https"))
+    .setHttpClientConfigCallback(new HttpClientConfigCallback() {
+        @Override
+        public HttpAsyncClientBuilder customizeHttpClient(
+                HttpAsyncClientBuilder httpClientBuilder) {
+            return httpClientBuilder.setSSLContext(sslContext);
+        }
+    });
+```
+
+### Node Selector
+
+没明白
+
+https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/_node_selector.html#_node_selector
+
