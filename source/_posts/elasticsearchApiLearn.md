@@ -1,5 +1,5 @@
 ---
-title: elasticsearchApiLearn
+title: Elasticsearch Api Learn
 date: 2019-04-29 22:48:30
 tags: elasticsearch
 ---
@@ -106,12 +106,11 @@ yellow open   beer      UWHB7v38S4mo_E-bqsGYjg   5   1          6            0  
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_create_index.png)
 
 
-
 todo  后续找下原因
 ```
 #! Deprecation: the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
 ```
-#### index and query a document 
+#### index and query a document
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_put_document.png
 )
@@ -126,7 +125,329 @@ PUT /customer/_doc/1?pretty
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_search_doc.png
 )
-#### delete an index 
+#### delete an index  删除索引
 ```
 delete /customer
 ```
+### modifying your data 修改数据
+
+#### indexing/replacing  documents 索引/替换
+
+
+推动一条数据
+```
+PUT /customer/_doc/1
+{
+    "name": "beer"
+}
+```
+
+再次执行，则是替换
+```
+PUT /customer/_doc/1
+{
+    "name": "beer"
+}
+```
+
+不指定ID，则是自动生成。注意，使用的是POST
+```
+POST /customer/_doc
+{
+    "name": "beer"
+}
+```
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_auto_id.png
+)
+
+
+#### updating documents 更新
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-update-documents.html
+
+
+Note though that Elasticsearch does not actually do in-place updates under the hood. Whenever we do an update, Elasticsearch deletes the old document and then indexes a new document with the update applied to it in one shot.
+
+所以说：update 的操作还是：delete -> insert.也就是先删后增。可能是因为elasticsearch是 near real time
+
+```
+POST /customer/_update/1
+{
+    "doc": {
+        "name": "beer test update"
+    }
+}
+```
+
+当然也可以增加字段（因为底层是先删后增）
+```
+POST /customer/_update/1
+{
+    "doc": {
+        "name": "beer test update",
+        "age": 20
+    }
+}
+```
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_update_add_field.png
+)
+也可以使用脚本,使 age = age + 5 
+
+```
+POST /customer/_update/1
+{
+  "script" : "ctx._source.age += 5"
+}
+```
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_update_by_script.png
+)
+
+ctx._source refers to the current source document that is about to be updated.
+
+**ctx._source** 指的是要更新的当前文档
+
+
+#### delete documents 删除文档
+
+```
+DELETE /customer/_doc/1
+```
+#### batch processing 批次处理
+
+
+一个简单的例子
+```
+POST /customer/_bulk
+{"index":{"_id":"4"}}
+{"name":"John Doe"}
+{"index":{"_id":"5"}}
+{"name":"beer"}
+```
+
+第一个是 updade，第二个是 delete
+```
+POST /customer/_bulk?pretty
+{"update":{"_id":"1"}}
+{"doc": { "name": "John Doe becomes Jane Doe" } }
+{"delete":{"_id":"2"}}
+```
+delete 之后并没有 doc
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_bulk.png
+)
+
+The Bulk API does not fail due to failures in one of the actions. If a single action fails for whatever reason, it will continue to process the remainder of the actions after it. When the bulk API returns, it will provide a status for each action (in the same order it was sent in) so that you can check if a specific action failed or not.
+
+
+批次计算的API，不会因为一个失败而全部失败，如果一个失败，则继续执行。最后会返回状态。
+
+
+### exploring your data  探索数据
+
+#### sample dataset 
+
+
+[一个神奇的json网站](https://next.json-generator.com/E1c5bmfjL)
+
+#### query language
+
+- match_all
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+```
+
+- size 
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "size": 1
+}
+```
+
+- from to
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "from": 2,
+  "to": 4
+}
+```
+
+- sort
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "age": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+```
+#### executing searches
+
+- _source
+
+自定义返回字段
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "_source": ["name"]
+}
+```
+
+- match
+
+匹配字段值(文本)。contains。注意是包含。而不是精确匹配。相当于 like(mysql).
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match": {
+      "age": 25
+    }
+  }
+}
+```
+如果是匹配 数字，则是精确匹配。
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_match_number.png
+)
+
+match 1010 的有数据，但是 match 10 的就没结果
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_match_number_1.png
+)
+- match_phrase
+
+匹配短语
+
+```
+GET /customer/_search
+{
+  "query": {
+    "match_phrase": {
+      "name": "beer test"
+    }
+  }
+}
+```
+
+- bool
+
+```
+GET /customer/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "name": "beer-1"
+          }
+        },
+        {
+          "match": {
+            "age": 20
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+- must_not
+
+```
+GET /customer/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "name": "beer-1"
+          }
+        }
+      ],
+      "must_not": [
+        {
+         "match": {
+           "age": 20
+         }
+        }
+      ]
+    }
+  }
+}
+```
+
+#### executing filters  过滤
+
+```
+GET /customer/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {"match_all": {}}
+      ],
+      "filter": {
+        "range": {
+          "age": {
+            "gte": 10,
+            "lte": 200
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### executing aggregations   聚合
+
+
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-aggregations.html
+
+
+- 
+## 彩蛋
+
+#### 查看版本信息
+
+```
+GET /
+```
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_version.png
+)
+
