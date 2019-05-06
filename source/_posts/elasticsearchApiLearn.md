@@ -342,6 +342,7 @@ GET /customer/_search
 )
 
 match 1010 的有数据，但是 match 10 的就没结果
+
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_match_number_1.png
 )
 - match_phrase
@@ -434,20 +435,98 @@ GET /customer/_search
 
 #### executing aggregations   聚合
 
-
-
-https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-aggregations.html
-
-
-- 
-## 彩蛋
-
-#### 查看版本信息
+- group
 
 ```
-GET /
+GET /customer/_search
+{
+  "size": 0,
+  "aggs": {
+    "group_by_age": {
+      "terms": {
+        "field": "age",
+        "size": 10
+      }
+    }
+  }
+}
 ```
 
-![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_version.png
+
+```
+select age,count(*)
+from customer
+group by age
+order by count(*) desc
+limit 10
+```
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_group_by.png
 )
+
+
+Note that we set size=0 to not show search hits because we only want to see the aggregation results in the response.
+
+size = 0 ,表示只需要 aggs 的结果，并不需要 hits 的结果。
+
+- group avg
+
+```
+GET /customer/_search
+{
+  "size": 0,
+  "aggs": {
+    "group_by_age": {
+      "terms": {
+        "field": "age",
+        "size": 10
+      },
+      "aggs": {
+        "avg_age": {
+          "avg": {
+            "field": "age"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+```
+select age,count(*),avg(age)
+from customer
+group by age
+order by count(*) desc
+limit 10
+```
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_group_avg.png
+)
+
+#### conclusion 结束
+
+elasticsearch is both a simple and complex product.
+
+
+## set up elasticsearch
+
+### install
+
+传送门：https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
+
+
+包含各个操作系统，以及docker
+
+### configuring
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/cosupload/es_config.png
+)
+
+
+#### set JVM options
+
+
+
+
 
