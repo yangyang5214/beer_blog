@@ -9,6 +9,6 @@ tags: [list,2019]
 - [x] split 的 坑
 - [x] list 返回相近的几个数值
 - [x] NestedResult 多关键字循环展示
-- [ ] (A#B)&C&(D#F) & 逻辑并  # 逻辑或c
+- [x] (A#B)&C&(D#F) & 逻辑并  # 逻辑或c
 - [ ]  list 转 json (行业数为例子)
-- [ ]  sql between and 交换值
+- [x]  sql between and 交换值
