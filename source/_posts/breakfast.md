@@ -55,3 +55,13 @@ tags: 随记
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/20190418.jpeg
 )
+
+### 地瓜粥
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast_sweet_potato.jpeg
+)
+
+### 煎饼子
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast_pancakes.jpeg
+)
