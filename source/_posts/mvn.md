@@ -28,33 +28,33 @@ http://maven.apache.org/install.html
 
 http://maven.apache.org/guides/getting-started/index.html
 
-- mvn compile 
+#### mvn compile 
 
 编译源代码，生成 target 文件夹
 
-- mvn test
+#### mvn test
 
 编译单元测试并且执行
 
-- mvn test-compile
+#### mvn test-compile
 
 只编译单元测试，不执行
 
-- mvn package
+#### mvn package
 
 打 jar 包
 
-- mvn install 
+#### mvn install 
 
 安装到本地仓库
 
-- mvn clean
+#### mvn clean
 
 清空之前的编译文件
 
 This will remove the target directory with all the build data before starting so that it is fresh.
 
-- mvn site  
+#### mvn site  
 
 生成项目的站点文件
 
