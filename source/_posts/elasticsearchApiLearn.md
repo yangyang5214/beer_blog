@@ -511,6 +511,10 @@ elasticsearch is both a simple and complex product.
 
 ## set up elasticsearch
 
+https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html
+
+//todo
+
 ### install
 
 传送门：https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
@@ -520,13 +524,136 @@ elasticsearch is both a simple and complex product.
 
 ### configuring
 
+https://www.elastic.co/guide/en/elasticsearch/reference/current/settings.html
+
+
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/cosupload/es_config.png
 )
 
+...
 
-#### set JVM options
+## API conventions API 的一些约定
+
+### Mutiple Indices
+
+支持多个index
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/multi-index.html 
+
+//todo
+
+- ignore_unavailable
+
+- allow_no_indices
+
+- expand_wildcards
+
+### Date math support in index names 索引中的日期数字支持
 
 
+索引中使用日期解析。
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/date-math-index-names.html
+
+
+### Common options 常见选项
+
+#### Pretty Results
+
+?pretty=true 格式化后的json返回。(use it for debugging only!). 仅仅用于 debug
+
+#### Human readable output  人可读
+
+Statistics are returned in a format suitable for humans (e.g. "exists_time": "1h" or "size": "1kb") and for computers (e.g. "exists_time_in_millis": 3600000 or "size_in_bytes": 1024). The human readable values can be turned off by adding ?human=false to the query string. This makes sense when the stats results are being consumed by a monitoring tool, rather than intended for human consumption. The default for the human flag is false.
+
+
+
+#### Date Math  日记数学
+
+对于日期格式，可以方便操作
+
+- +1h  ：Add one hour
+- -1d: Subtract one day
+- /d: Round down to the nearest day 四舍五入一天
+
+#### Response Filtering
+
+对于返回结果的过滤（厉害了）
+
+```
+GET localhost:9200/_search?q=elasticsearch&filter_path=took,hits.hits._id,hits.hits._score"
+```
+
+返回
+```
+{
+  "took" : 3,
+  "hits" : {
+    "hits" : [
+      {
+        "_id" : "0",
+        "_score" : 1.6375021
+      }
+    ]
+  }
+}
+```
+#### Flat Settings  flat(平坦的)
+
+结果以平坦的方式呈现（Flat）。
+
+```
+GET twitter/_settings?flat_settings=true
+
+{
+  "twitter" : {
+    "settings": {
+      "index.number_of_replicas": "1",
+      "index.number_of_shards": "1",
+      "index.creation_date": "1474389951325",
+      "index.uuid": "n6gzFZTgS664GUfx0Xrpjw",
+      "index.version.created": ...,
+      "index.provided_name" : "twitter"
+    }
+  }
+}
+```
+#### parameters
+
+follow the convention of using underscore casing.
+
+下划线的惯例
+
+#### Boolean values
+
+true and false. 其他值为 error
+
+#### Number Values
+
+可以使用数字类型的 string 
+####  Time Units 时间单位
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_time_unit.png
+)
+
+#### 
+
+...
+
+### URL-based access control
+
+代理访问？？？
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/url-access-control.html
+
+
+## Document APIs  api 文档
+
+### single documents apis 单文档
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html
+
+### multi-documents apis  多文档
 
 
 
