@@ -636,10 +636,6 @@ true and false. 其他值为 error
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_time_unit.png
 )
 
-#### 
-
-...
-
 ### URL-based access control
 
 代理访问？？？
@@ -651,9 +647,86 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/url-access-contr
 
 ### single documents apis 单文档
 
-https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html
+
+#### Index Api 
+
+推送一条数据（或者更新）
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_put_date.png
+)
+
+返回结果：
+```
+{
+  "_index" : "beer",
+  "_type" : "_doc",
+  "_id" : "1000",
+  "_version" : 1,
+  "result" : "created",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 0,
+  "_primary_term" : 1
+}
+```
+
+##### Automatic Index Creation  自动创建索引
+
+如果索引不存在，则自动创建 index
+
+##### Operation Type
+
+如果指定了  on_tyoe=create,如果 id 存在，则 error
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/cosupload
+)
+
+等价于：
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_create.png
+)
+
+##### Automatic ID Generation  ID 自动生成
+
+如果没指定ID ，则自动生成ID.注意是 POST 不是 PUT
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_automatic_id_generation.png
+)
+
+#### Get Index
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_get_by_id.png
+)
+
+##### realtime
+
+默认情况下，get API  是实时的。只要 id 存在。如果 一个文档 update,但是not yet refreshed, 会去 refresh.
+
+##### source filtering
+
+默认  _source 是显示的。可以设置 _source=false.
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_source_false.png
+)
+
+##### stored fields
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html
+
+##### get _source directly
+
+直接获取 _source 内容
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_get_source.png
+)
+
+#### delete APi
+
+```
+DELETE /beer/_doc/100
+```
 
 ### multi-documents apis  多文档
-
-
-
