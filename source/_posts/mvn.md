@@ -16,12 +16,14 @@ Apache Maven is a software project management and comprehension tool. Based on t
 
 
 软件项目管理工具。pom( project object model)
+
 ### download and install 
 
 http://maven.apache.org/download.cgi
 
 http://maven.apache.org/install.html
 
+<!--more-->
 ### 命令
 
 我主要参考的是这个网址：
