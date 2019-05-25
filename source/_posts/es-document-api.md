@@ -56,6 +56,7 @@ tags: elasticsearch
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_automatic_id_generation.png
 )
 
+<!--more-->
 #### Get
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_get_by_id.png
@@ -279,5 +280,167 @@ POST customer/_update/1
     "doc_as_upsert" : true
 }
 ```
-### update by query 
+#### update by query 
+
+The simplest usage of _update_by_query just performs an update on every document in the index without changing the source. This is useful to pick up a new property or some other online mapping change. Here is the API:
+
+最简单的用法是对文档进行更新，而不更新源。（可能存在多个版本，获取新属性）
+
+```
+POST customer/_update_by_query?conflicts=proceed
+```
+
+
+也可以在 _update_by_query 里面使用 query DSL.
+
+You can also limit _update_by_query using the Query DSL. 
+
+This will update all documents from the twitter index for the user kimchy:
+```
+POST customer/_update_by_query?conflicts=proceed
+{
+  "query": { 
+    "term": {
+      "user": "kimchy"
+    }
+  }
+}
+```
+### mutil-document api
+
+批量操作 api
+
+```
+GET /_mget
+{
+  "docs":[
+    {
+      "_index": "customer",
+      "_id": "1"
+    },
+     {
+      "_index": "customer",
+      "_id": "2"
+    }
+  ]
+}
+```
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_multi_mget.png
+)
+
+也可以复用 index.
+
+```
+GET /customer/_mget
+{
+  "docs":[
+    {
+      "_id": "1"
+    },
+     {
+      "_id": "2"
+    }
+  ]
+}
+```
+
+变种：简化版
+```
+GET /customer/_mget
+{
+  "ids": [
+    "1",
+    "2"
+  ]
+}
+```
+#### source filtering
+
+
+直接官网的例子：
+
+```
+GET /_mget
+{
+    "docs" : [
+        {
+            "_index" : "test",
+            "_type" : "_doc",
+            "_id" : "1",
+            "_source" : false
+        },
+        {
+            "_index" : "test",
+            "_type" : "_doc",
+            "_id" : "2",
+            "_source" : ["field3", "field4"]
+        },
+        {
+            "_index" : "test",
+            "_type" : "_doc",
+            "_id" : "3",
+            "_source" : {
+                "include": ["user"],
+                "exclude": ["user.location"]
+            }
+        }
+    ]
+}
+```
+
+#### bulk api
+
+可以一起发送不同类型的操作。感觉用不到。api 很简单
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html
+
+#### reindex api
+
+
+最简单是就是 copy 一份。customer => new_customer
+
+```
+POST _reindex
+{
+  "source": {
+    "index": "customer"
+  },
+  "dest": {
+    "index": "new_customer"
+  }
+}
+```
+
+#### term vectors
+
+一些分词的信息
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_term_vectors.png
+)
+
+#### optimistic concurrency control
+
+
+es 分布式的架构，通过 _version 来确保不会被旧的数据覆盖。
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_concuuency_control.png
+)
+
+_seq_no 和 _primary_term 字段分别保存了   操作的 seq_no 和 操作的主要术语。
+
+```
+{
+  "_index" : "customer",
+  "_type" : "_doc",
+  "_id" : "2",
+  "_version" : 2,
+  "_seq_no" : 51,
+  "_primary_term" : 2,
+  "found" : true,
+  "_source" : {
+    "counter" : 1
+  }
+}
+```
 
