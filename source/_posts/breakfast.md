@@ -71,3 +71,8 @@ tags: 随记
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/20190521.jpeg
 )
+
+### 醪糟
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/breakfast_20190525.jpeg
+)
