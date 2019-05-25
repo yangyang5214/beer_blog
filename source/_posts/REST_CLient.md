@@ -1,7 +1,7 @@
 ---
 title: Java REST Client 文档学习
 date: 2019-04-22 22:23:29
-tags: elasticsearch,java
+tags: [elasticsearch,java]
 ---
 
 > 公司之前使用的是 transclient 调用，结果总是丢数据。搞得头大。学习一下 [restClient官方文档](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/java-rest-high-supported-apis.html)。
