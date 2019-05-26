@@ -13,7 +13,7 @@ tags: elasticsearch
 只是个人理解。不一定对。
 
 
-推动一条数据，指定 routing .
+推送一条数据，指定 routing .
 ```
 POST /customer/_doc?routing=beer
 {
@@ -50,7 +50,7 @@ POST /customer/_search?routing=beer
 
 自动选择副本分片
 
-
+<!--more-->
 
 ### search
 
@@ -349,7 +349,62 @@ GET /_search
 
 nice  太棒了，这功能。这样的话，代码就简洁多了（java 里面）。
 
+```
+POST customer/_search/template
+{
+  "source": {
+    "query": {
+      "match": {
+        "{{user}}": "{{user_value}}"
+      }
+    }
+  },
+  "params": {
+    "user": "user",
+    "user_value": "beer"
+  }
+}
+```
 
+直接转化 json
 
+```
+GET _search/template
+{
+  "source": "{ \"query\": { \"terms\": {{#toJson}}statuses{{/toJson}} }}",
+  "params": {
+    "statuses" : {
+        "status": [ "pending", "published" ]
+    }
+  }
+}
+```
 
+结果：
+```
+{
+  "query": {
+    "terms": {
+      "status": [
+        "pending",
+        "published"
+      ]
+    }
+  }
+}
+```
 
+### search shards
+
+The search shards api returns the indices and shards that a search request would be executed against
+
+```
+GET company_hub_py/_search_shards
+```
+
+### count api
+
+get the number of matches for that query
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_count.png
+)
