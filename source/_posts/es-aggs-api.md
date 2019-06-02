@@ -100,3 +100,35 @@ POST /exams/_search?size=0
     }
 }
 ```
+
+#### weighted avg
+
+todo  
+
+加权平均值，但是感觉不一样。后期更新。
+
+#### cardinality 
+
+基数统计。[但是不准确](https://www.elastic.co/guide/en/elasticsearch/reference/7.1/search-aggregations-metrics-cardinality-aggregation.html
+)。
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_cardinality.png
+)
+
+```
+SELECT parent_id
+from city
+GROUP BY parent_id
+```
+
+#### extend stats
+
+A multi-value metrics aggregation  多值度量聚合
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_extend_status.png
+)
+
+#### geo bounds
+
+https://www.elastic.co/guide/en/elasticsearch/reference/7.1/search-aggregations-metrics-geobounds-aggregation.html
+
