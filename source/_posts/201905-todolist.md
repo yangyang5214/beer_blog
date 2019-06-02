@@ -5,8 +5,8 @@ tags: list
 ---
 > 主要完成对 es 文档的系统化学习
 
-- [ ] elasticsearch api 学习
-- [ ] elasticsearch rest client api 学习
+- [x] elasticsearch api 学习
+- [x] elasticsearch rest client api 学习
 
 
 ---------------------------------------------
