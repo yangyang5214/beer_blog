@@ -130,5 +130,86 @@ A multi-value metrics aggregation  多值度量聚合
 
 #### geo bounds
 
-https://www.elastic.co/guide/en/elasticsearch/reference/7.1/search-aggregations-metrics-geobounds-aggregation.html
+city(index) 增加一个字段，字段类型为： geo_point
+
+```
+PUT /city/_mapping
+{
+  "properties": {
+    "location": {
+      "type": "geo_point"
+    }
+  }
+}
+```
+
+然后推送数据上去之后，location 类型就变成了 text ,不是 geo_point 了。
+
+
+参考：https://www.cnblogs.com/fanhaobai/p/7435073.html 
+
+todo
+
+#### Max/Min/Sum
+
+```
+POST /city/_search?size=0
+{
+  "aggs": {
+    "max_id": {
+      "max": {
+        "field": "id"
+      }
+    }
+  }
+}
+```
+
+
+#### stats
+
+![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/es_agg_stats.png
+)
+
+#### top_hits
+
+```
+POST /city/_search?size=0
+{
+  "aggs": {
+    "top_price_three": {
+      "top_hits": {
+        "sort": [
+          {
+            "price": {
+              "order": "desc"
+            }
+          }
+        ],
+        "size": 5,
+        "_source": {
+          "includes": ["name","id"]
+        }
+      }
+    }
+  }
+}
+```
+
+#### value ocunt
+
+```
+POST /city/_search?size=0
+{
+  "aggs": {
+    "level_count": {
+      "value_count": {
+        "field": "parent_id"
+      }
+      
+    }
+  }
+}
+```
+
 
