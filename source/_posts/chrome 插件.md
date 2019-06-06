@@ -8,8 +8,6 @@ date:  2018-12-31 12:00:00
 > 自己在用的插件记录
 
 
-<!--more-->
-
 ### [Isometric Contributions](https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien/related)
 
 github 的贡献图变成 3D 展示
@@ -17,7 +15,7 @@ github 的贡献图变成 3D 展示
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/IsometricContributions.jpg
 )
 
-
+<!--more-->
 
 ### [octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 
@@ -45,13 +43,16 @@ json  可视化
 )
 
 
-### [Grammarly for Chrome](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen)
+### 图片助手(ImageAssistant)
 
-语法单词检查
-
-Grammarly will make sure your messages, documents, and social media posts are clear, mistake-free, and impactful. Adding Grammarly to Chrome means that your spelling and grammar will be vetted on Gmail, Facebook, Twitter, Linkedin, Tumblr, and nearly everywhere else you write on the web. Once you register your new account, you will start to receive weekly emails with personalized insights and performance stats (one of our most popular new features). Working on a large project, an essay, or a blog post? No sweat. You can create and store all of your documents in your new online editor.
+http://www.pullywood.com/antiADs/
 
 
-![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/grammarly.jpg
-)
+### 广告屏蔽
 
+https://adblockplus.org/zh_CN/
+
+
+### web 前端助手
+
+https://www.baidufe.com/fehelper/feedback.html
