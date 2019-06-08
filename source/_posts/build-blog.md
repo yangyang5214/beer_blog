@@ -67,6 +67,10 @@ title: beer
 theme: next
 ```
 
+图标文件的修改：
+
+hexo next  使用的是： https://fontawesome.com/icons?from=io 的图标，所以找到名字，配置里面替换就好。
+
 ### nginx 配置
 
 配置 server
