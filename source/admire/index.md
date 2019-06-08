@@ -1,10 +1,4 @@
----
-title: admire
-date: 2019-06-08 18:24:29
-comments: false
----
+> 收藏一些很好的博客
 
 
-> 收藏的很好的博客
-
-![howtodoinjava](https://howtodoinjava.com/)
+1. [howtodoinjava](https://howtodoinjava.com/)
