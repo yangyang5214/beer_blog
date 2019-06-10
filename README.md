@@ -8,8 +8,8 @@ https://www.hexianwei.com/
 
 ### 主要技术点
 
-- [hexo](https://hexo.io/zh-cn/)  博客框架
-- 模板 hexo-next
+- [hexo 博客框架](https://hexo.io/zh-cn/)  
+- [模板next](https://theme-next.iissnan.com/)
 - [图片模块](https://www.hexianwei.com/2019/01/11/hexoNextPhoto/)
 - [图片存储](https://www.hexianwei.com/2018/12/30/coscmd/)
 
