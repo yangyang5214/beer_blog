@@ -362,7 +362,7 @@ livere_uid: MTAyMC80MTkxMy8xODQ1OQ==
 # Share
 #jiathis:
 # Warning: JiaThis does not support https.
-#add_this_id:
+# add_this_id:
 
 # Share
 #duoshuo_share: true
@@ -457,7 +457,7 @@ busuanzi_count:
 
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 66441150
 
 # Tencent MTA ID
 # tencent_mta:
