@@ -126,7 +126,7 @@ public static void joinMethodTwo(List<String> list) {
 }
 ```
 
-获取使用 StringJoiner
+或者使用 StringJoiner 。封装一个方法
 
 ```
 public static String listJoin(List<String> list, String delimiter) {
