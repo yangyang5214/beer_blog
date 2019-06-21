@@ -1,21 +1,10 @@
 ---
-title:  vscode
+title:  vscode 插件
 tags:  工具
 notebook: 
 ---
 
 > vscode 插件推荐
-
-
-### vscode
-
-- ctrl +ｄ
- ```
-https://code.visualstudio.com/docs/editor/codebasics
- 
- # 选择当前单词，以及下一个相同的
- Ctrl+D selects the word at the cursor, or the next occurrence of the current selection.
- ```
 
 ### evermokey
 
@@ -50,6 +39,22 @@ https://code.visualstudio.com/docs/editor/codebasics
 ```
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/微信截图_20190620194816.png)
 
+### Insert Date String
 
+ctrl + shift + i
 
+插入当前时间
 
+### JSON Tools
+
+alt + m    JSON minify.
+
+ctrl + alt + m   JSON pretty.
+
+### tencent-cloud-cos-upload-image
+
+tencent-cloud-cos-upload-image
+
+https://marketplace.visualstudio.com/items?itemName=galenye.tencent-cloud-cos-upload-image
+
+### 
