@@ -51,5 +51,10 @@ alt + m    JSON minify.
 
 ctrl + alt + m   JSON pretty.
 
-### 
+### tencent-cloud-cos-upload-image
 
+tencent-cloud-cos-upload-image
+
+https://marketplace.visualstudio.com/items?itemName=galenye.tencent-cloud-cos-upload-image
+
+### 
