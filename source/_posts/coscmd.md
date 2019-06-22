@@ -1,6 +1,6 @@
 ---
 title: coscmd,cosupload
-tags: [工具]
+tags: tools
 date: 2018-12-30 14:00:00
 ---
 

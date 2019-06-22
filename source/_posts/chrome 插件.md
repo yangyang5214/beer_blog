@@ -1,6 +1,6 @@
 ---
 title: chrome 插件
-tags: [工具]
+tags: [tools]
 date:  2018-12-31 12:00:00
 ---
 

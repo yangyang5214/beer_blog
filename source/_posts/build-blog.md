@@ -1,6 +1,6 @@
 ---
 title: 搭建blog
-tags: 工具
+tags: tools
 date: 2018-12-30 20:00:00
 ---
 

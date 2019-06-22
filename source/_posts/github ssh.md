@@ -1,6 +1,6 @@
 ---
 title: github ssh 
-tags: 工具
+tags: tools
 date:  2019-01-07 16:00:00
 ---
 

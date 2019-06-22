@@ -1,7 +1,7 @@
 ---
-title:  vscode 插件
-tags:  工具
-notebook: 
+title: vscode 插件
+date: 2019-06-22 10:46:32
+tags: [tools,vscode]
 ---
 
 > vscode 插件推荐
@@ -39,6 +39,8 @@ notebook:
 ```
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/beer/blog/微信截图_20190620194816.png)
 
+<!--more-->
+
 ### Insert Date String
 
 ctrl + shift + i
@@ -53,8 +55,10 @@ ctrl + alt + m   JSON pretty.
 
 ### tencent-cloud-cos-upload-image
 
-tencent-cloud-cos-upload-image
+上传图片到 tencent cos
 
-https://marketplace.visualstudio.com/items?itemName=galenye.tencent-cloud-cos-upload-image
+shift + p 直接上传剪贴板的图片
 
-### 
+shift + o 上传本地图片
+
+
