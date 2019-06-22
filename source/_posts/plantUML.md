@@ -1,7 +1,7 @@
 ---
 title: plantUML
 date: 2019-01-22 15:10:19
-tags: [UML,设计模式]
+tags: [UML,DesignPatterns]
 ---
 
 > 泛化，实现，依赖，关联，组合，聚合

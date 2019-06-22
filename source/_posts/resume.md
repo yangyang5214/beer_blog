@@ -1,7 +1,7 @@
 
 ---
 title: resume-2019
-tags: 随记
+tags: note
 date: 2019-01-01 00:00:00
 ---
 

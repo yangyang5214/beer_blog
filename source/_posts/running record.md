@@ -1,6 +1,6 @@
 ---
 title: running record
-tags: [随记,跑步]
+tags: [note,run]
 date: 2019-03-31 10:18:44
 ---
 

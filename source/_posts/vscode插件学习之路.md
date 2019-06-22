@@ -1,7 +1,7 @@
 ---
 title: vscode插件学习之路
 date: 2019-06-21 22:04:20
-tags: [工具,vscode]
+tags: [tools,vscode]
 ---
 
 

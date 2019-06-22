@@ -1,7 +1,7 @@
 ---
 title: MapoTofu
 date: 2019-05-29 08:07:33
-tags: [随记,weiwei]
+tags: [note,weiwei]
 ---
 
 
