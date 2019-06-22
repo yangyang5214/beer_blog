@@ -1,7 +1,7 @@
 ---
 title: one sentence everyday
 date: 2019-06-14 08:07:24
-tags: 随记
+tags: note
 ---
 
 

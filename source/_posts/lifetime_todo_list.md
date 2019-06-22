@@ -1,7 +1,7 @@
 ---
 title: lifetime todo list 
 date: 2019-04-10 23:33:32
-tags: [随记,list]
+tags: [note,list]
 ---
 
 
