@@ -1,7 +1,7 @@
 ---
 title: mac-idea
 date: 2019-04-23 23:07:50
-tags: 工具
+tags: tools
 ---
 
 > 记一下 mac 的 idea 快捷键

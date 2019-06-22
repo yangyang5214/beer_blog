@@ -1,7 +1,7 @@
 ---
 title: vscode settings
 date: 2019-06-18 16:55:35
-tags: [工具,vscode]
+tags: [tools,vscode]
 ---
 
 > vscode 的设置 
