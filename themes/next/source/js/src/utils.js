@@ -14,7 +14,7 @@ NexT.utils = NexT.$u = {
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
-	        var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
+          var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
           $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
         }
 
@@ -42,7 +42,7 @@ NexT.utils = NexT.$u = {
     $('#posts').find('img').lazyload({
       //placeholder: '/images/loading.gif',
       effect: 'fadeIn',
-      threshold : 0
+      threshold: 0
     });
   },
 
@@ -53,8 +53,8 @@ NexT.utils = NexT.$u = {
     var tNav = '.tabs ul.nav-tabs ';
 
     // Binding `nav-tabs` & `tab-content` by real time permalink changing.
-    $(function() {
-      $(window).bind('hashchange', function() {
+    $(function () {
+      $(window).bind('hashchange', function () {
         var tHash = location.hash;
         if (tHash !== '') {
           $(tNav + 'li:has(a[href="' + tHash + '"])').addClass('active').siblings().removeClass('active');
@@ -66,7 +66,7 @@ NexT.utils = NexT.$u = {
     $(tNav + '.tab').on('click', function (href) {
       href.preventDefault();
       // Prevent selected tab to select again.
-      if(!$(this).hasClass('active')){
+      if (!$(this).hasClass('active')) {
 
         // Add & Remove active class on `nav-tabs` & `tab-content`.
         $(this).addClass('active').siblings().removeClass('active');
@@ -106,7 +106,7 @@ NexT.utils = NexT.$u = {
       var winHeight = $(window).height();
       var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
       var scrollPercent = (scrollTop) / (contentMath);
-      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentRounded = Math.round(scrollPercent * 100);
       var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
       $('#scrollpercent>span').html(scrollPercentMaxed);
     });
@@ -131,7 +131,7 @@ NexT.utils = NexT.$u = {
       'music.163.com',
       'www.tudou.com'
     ];
-    var pattern = new RegExp( SUPPORTED_PLAYERS.join('|') );
+    var pattern = new RegExp(SUPPORTED_PLAYERS.join('|'));
 
     $iframes.each(function () {
       var iframe = this;
@@ -174,7 +174,7 @@ NexT.utils = NexT.$u = {
         if (this.src.search('music.163.com') > 0) {
           newDimension = getDimension($iframe);
           var shouldRecalculateAspect = newDimension.width > oldDimension.width ||
-                                        newDimension.height < oldDimension.height;
+            newDimension.height < oldDimension.height;
 
           // 163 Music Player has a fixed height, so we need to reset the aspect radio
           if (shouldRecalculateAspect) {

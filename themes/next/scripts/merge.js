@@ -1121,8 +1121,7 @@ function baseMerge(object, source, srcIndex, customizer, stack) {
     if (isObject(srcValue)) {
       stack || (stack = new Stack);
       baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
-    }
-    else {
+    } else {
       var newValue = customizer
         ? customizer(object[key], srcValue, (key + ''), object, source, stack)
         : undefined;
@@ -1170,28 +1169,22 @@ function baseMergeDeep(object, source, key, srcIndex, mergeFunc, customizer, sta
     if (isArray(srcValue) || isTypedArray(srcValue)) {
       if (isArray(objValue)) {
         newValue = objValue;
-      }
-      else if (isArrayLikeObject(objValue)) {
+      } else if (isArrayLikeObject(objValue)) {
         newValue = copyArray(objValue);
-      }
-      else {
+      } else {
         isCommon = false;
         newValue = baseClone(srcValue, true);
       }
-    }
-    else if (isPlainObject(srcValue) || isArguments(srcValue)) {
+    } else if (isPlainObject(srcValue) || isArguments(srcValue)) {
       if (isArguments(objValue)) {
         newValue = toPlainObject(objValue);
-      }
-      else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
+      } else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
         isCommon = false;
         newValue = baseClone(srcValue, true);
-      }
-      else {
+      } else {
         newValue = objValue;
       }
-    }
-    else {
+    } else {
       isCommon = false;
     }
   }
@@ -1638,8 +1631,8 @@ function isIterateeCall(value, index, object) {
   }
   var type = typeof index;
   if (type == 'number'
-      ? (isArrayLike(object) && isIndex(index, object.length))
-      : (type == 'string' && index in object)
+    ? (isArrayLike(object) && isIndex(index, object.length))
+    : (type == 'string' && index in object)
   ) {
     return eq(object[index], value);
   }
@@ -2039,7 +2032,7 @@ function isPlainObject(value) {
   }
   var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
   return (typeof Ctor == 'function' &&
-  Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
+    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
 }
 
 /**
