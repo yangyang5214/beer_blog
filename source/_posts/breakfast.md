@@ -1,7 +1,7 @@
 ---
 title: breakfast
 date: 2019-03-25 22:54:05
-tags: 随记
+tags: note
 ---
 
 > 长期更新
