@@ -1,7 +1,7 @@
 ---
 title: bloom filter
-tags: 算法,java
-notebook: 
+tags: java
+date: 2019-06-23 16:52:14
 ---
 
 
@@ -9,6 +9,4 @@ notebook:
 
 [原文链接](https://mp.weixin.qq.com/s/O3Hl5bPwWr7KftKWNsbmsA)
 
-
-### bloom filter
 
