@@ -1,6 +1,8 @@
 sidebar-inline-links-item() {
   margin: 5px 0 0;
-  if !hexo-config('social_icons.icons_only') { width: 50%; }
+  if !hexo-config('social_icons.icons_only') {
+    width: 50%;
+  }
 
   & a {
     box-sizing: border-box;
@@ -11,6 +13,8 @@ sidebar-inline-links-item() {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    if hexo-config('social_icons.transition') { the-transition(); }
+    if hexo-config('social_icons.transition') {
+      the-transition();
+    }
   }
 }

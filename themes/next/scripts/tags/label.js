@@ -9,7 +9,7 @@
  *           If not defined, default class will be selected.
  */
 
-function postLabel (args) {
+function postLabel(args) {
   args = args.join(' ').split('@');
   var classes = args[0] || 'default';
   var text = args[1] || '';
@@ -20,4 +20,4 @@ function postLabel (args) {
   return '<span class="label ' + classes + '">' + text + '</span>';
 }
 
-hexo.extend.tag.register('label', postLabel, { ends: false });
+hexo.extend.tag.register('label', postLabel, {ends: false});
