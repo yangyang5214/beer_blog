@@ -12,15 +12,9 @@ body {
   color: $text-color;
   background: $body-bg-color;
 
-  +mobile() {
-    padding-right: 0 !important;
-  }
-  +tablet() {
-    padding-right: 0 !important;
-  }
-  +desktop-large() {
-    font-size: $font-size-large;
-  }
+  +mobile() { padding-right: 0 !important; }
+  +tablet() { padding-right: 0 !important; }
+  +desktop-large() { font-size: $font-size-large; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,9 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
 }
 
-h2, h3, h4, h5, h6 {
-  margin: 20px 0 15px;
-}
+h2, h3, h4, h5, h6 { margin: 20px 0 15px; }
 
 for headline in (1..6) {
   h{headline} {
@@ -47,9 +39,7 @@ for headline in (1..6) {
   }
 }
 
-p {
-  margin: 0 0 20px 0;
-}
+p { margin: 0 0 20px 0; }
 
 a {
   color: $link-color;
@@ -95,17 +85,13 @@ blockquote {
   color: $grey-dim;
   border-left: 4px solid $gray-lighter;
 
-  cite:
-
-  :before {
+  cite::before {
     content: "-";
     padding: 0 5px;
   }
 }
 
-dt {
-  font-weight: $font-weight-bolder;
-}
+dt { font-weight: $font-weight-bolder; }
 
 dd {
   margin: 0;

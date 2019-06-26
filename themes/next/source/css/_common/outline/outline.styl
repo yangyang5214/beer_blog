@@ -5,9 +5,7 @@
 // =================================================
 
 
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 .container {
   position: relative;
@@ -23,26 +21,19 @@ html, body {
   width: $content-desktop;
 
   +desktop-large() {
-    .container & {
-      width: $content-desktop-large;
-    }
+    .container & { width: $content-desktop-large; }
   }
 }
 
 // Main Section
 // --------------------------------------------------
-.main {
-  padding-bottom: $footer-height + $gap-between-main-and-footer;
-}
-
+.main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
 .main-inner {
   margin: 0 auto;
   width: $content-desktop;
 
   +desktop-large() {
-    .container & {
-      width: $content-desktop-large;
-    }
+    .container & { width: $content-desktop-large; }
   }
 }
 
@@ -56,15 +47,12 @@ html, body {
   width: 100%;
   min-height: $footer-height;
 }
-
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
   width: $content-desktop;
 
   +desktop-large() {
-    .container & {
-      width: $content-desktop-large;
-    }
+    .container & { width: $content-desktop-large; }
   }
 }
