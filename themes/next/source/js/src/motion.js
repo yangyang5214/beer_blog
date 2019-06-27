@@ -93,9 +93,7 @@ $(document).ready(function () {
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
       this.sidebarEl.on('touchstart', this.touchstartHandler.bind(this));
       this.sidebarEl.on('touchend', this.touchendHandler.bind(this));
-      this.sidebarEl.on('touchmove', function (e) {
-        e.preventDefault();
-      });
+      this.sidebarEl.on('touchmove', function(e){e.preventDefault();});
 
       $(document)
         .on('sidebar.isShowing', function () {
@@ -123,15 +121,15 @@ $(document).ready(function () {
       }
       sidebarToggleLines.init();
     },
-    touchstartHandler: function (e) {
+    touchstartHandler: function(e) {
       xPos = e.originalEvent.touches[0].clientX;
       yPos = e.originalEvent.touches[0].clientY;
     },
-    touchendHandler: function (e) {
+    touchendHandler: function(e) {
       var _xPos = e.originalEvent.changedTouches[0].clientX;
       var _yPos = e.originalEvent.changedTouches[0].clientY;
-      if (_xPos - xPos > 30 && Math.abs(_yPos - yPos) < 20) {
-        this.clickHandler();
+      if (_xPos-xPos > 30 && Math.abs(_yPos-yPos) < 20) {
+          this.clickHandler();
       }
     },
     showSidebar: function () {
@@ -203,7 +201,7 @@ $(document).ready(function () {
     }
   };
 
-  NexT.motion.middleWares = {
+  NexT.motion.middleWares =  {
     logo: function (integrator) {
       var sequence = [];
       var $brand = $('.brand');
@@ -227,7 +225,7 @@ $(document).ready(function () {
       hasElement($title) && sequence.push({
         e: $title,
         p: {opacity: 1, top: 0},
-        o: {duration: 200}
+        o: { duration: 200 }
       });
 
       hasElement($subtitle) && sequence.push({
@@ -246,7 +244,7 @@ $(document).ready(function () {
       }
 
 
-      function getMistLineSettings(element, translateX) {
+      function getMistLineSettings (element, translateX) {
         return {
           e: $(element),
           p: {translateX: translateX},
@@ -262,7 +260,7 @@ $(document).ready(function () {
        * @param {jQuery|Array} $elements
        * @returns {boolean}
        */
-      function hasElement($elements) {
+      function hasElement ($elements) {
         $elements = Array.isArray($elements) ? $elements : [$elements];
         return $elements.every(function ($element) {
           return $.isFunction($element.size) && $element.size() > 0;
@@ -286,11 +284,11 @@ $(document).ready(function () {
 
       hasPost ? postMotion() : integrator.next();
 
-      function postMotion() {
+      function postMotion () {
         var postMotionOptions = window.postMotionOptions || {
-          stagger: 100,
-          drag: true
-        };
+            stagger: 100,
+            drag: true
+          };
         postMotionOptions.complete = function () {
           integrator.next();
         };

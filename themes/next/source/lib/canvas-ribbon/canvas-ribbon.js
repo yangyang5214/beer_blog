@@ -1,20 +1,16 @@
 /**
  * Created by zproo on 2017/4/3.
  */
-!function () {
-  document.addEventListener("touchstart", (e) = > {
+! function() {
+  document.addEventListener("touchstart", (e) => {
     targetA = true;
-})
-  ;
-  document.addEventListener("touchmove", (e) = > {
+  });
+  document.addEventListener("touchmove", (e) => {
     targetA = false
-  }
-)
-  document.addEventListener("click", (e) = > {
+  })
+  document.addEventListener("click", (e) => {
     targetA = true
-  }
-)
-
+  })
   function e() {
     if (targetA) {
       for (a.clearRect(0, 0, d, r), i = [{
@@ -57,7 +53,7 @@
     s = f.cos,
     x = f.random,
     targetA = false;
-  c.width = d * l, c.height = r * l, a.scale(l, l), a.globalAlpha = .6, document.onclick = e, document.ontouchend = e, setTimeout(function () {
+  c.width = d * l, c.height = r * l, a.scale(l, l), a.globalAlpha = .6, document.onclick = e, document.ontouchend = e, setTimeout(function() {
     targetA = true;
     e();
   }, 100);

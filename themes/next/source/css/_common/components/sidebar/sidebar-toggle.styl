@@ -13,19 +13,14 @@
 
   +tablet() {
     fixbutton() if hexo-config('sidebar.onmobile');
-    hide() if
+    hide() if not hexo-config('sidebar.onmobile');
+  }
+  +mobile() {
+    fixbutton() if hexo-config('sidebar.onmobile');
+    hide() if not hexo-config('sidebar.onmobile');
+  }
+}
 
-not
-hexo-config('sidebar.onmobile');
-}
-+mobile() {
-  fixbutton() if hexo-config('sidebar.onmobile');
-  hide() if
-
-not
-hexo-config('sidebar.onmobile');
-}
-}
 
 
 .sidebar-toggle-line {
@@ -37,7 +32,5 @@ hexo-config('sidebar.onmobile');
   background: white;
   margin-top: 3px;
 
-  &:first-child {
-    margin-top: 0;
-  }
+  &:first-child { margin-top: 0; }
 }
