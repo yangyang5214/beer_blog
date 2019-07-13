@@ -12,6 +12,7 @@ tags: es
 
 
 调用之前，格式化数据。
+
 ```
  public JSONArray callEsForSearch(JSONObject requestData, String index, String type) {
      Objects.requireNonNull(index, "es index null");
@@ -30,6 +31,7 @@ tags: es
 <!--more-->
 
 调用 es 核心方法
+
 ```
 public JSONObject callEs(String endPoint, JSONObject requestData) {
     NStringEntity stringEntity = new NStringEntity(JSON.toJSONString(requestData), ContentType.APPLICATION_JSON);
@@ -128,13 +130,15 @@ GET _search/template
 注意 es 版本问题：
 
 ![es 5.0版本 search-template语法](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/20190713200554_817acc456cb4996bcf612a223c69b457.png)
+
+
 ![es 7.0版本 search-template语法](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/20190713200653_a4236046ed787d63b3e2efcd2a30efb4.png)
 
 更改 url 的版本号，即可找到和自己版本对应的语法。
 
 springboot 添加配置文件（application-es.yml）。然后 include 进来。
 
-例子：注意 '' 单引号包起来。（好像是因为 {{}} 的问题）
+例子：注意 单引号包起来。（好像是因为 &#123;&#123;&#125;&#125; 的问题）
 
 ```
 es:
