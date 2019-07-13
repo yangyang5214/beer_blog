@@ -1,6 +1,7 @@
 ---
 title: es安装
-tags: es
+tags: [elasticsearch,Elasticsearch核心技术与实战]
+date: 2019-07-13 18:58:30
 ---
 
 ### 安装
@@ -44,4 +45,16 @@ bin/elasticsearch -E node.name=node3 -E cluster.name=beer -E path.data=node3_dat
 
 ```
 localhost:9200/_cat/nodes
+```
+
+### kibana
+
+
+```
+#启动
+bin/kibana
+# 查看插件
+root@ubuntu:/data/kibana/kibana-5.5.3# bin/kibana-plugin list
+x-pack@5.5.3
+
 ```
