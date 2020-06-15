@@ -1,5 +1,5 @@
 ---
-title: daily_temperatures
+title: 每日温度
 date: 2020-06-14 08:56:54
 tags: stack
 ---
