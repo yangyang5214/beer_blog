@@ -100,32 +100,9 @@ def cut_photo(path):
     return im_path
 
 
-def git_operation():
-    """
-    提交github
-    """
-
-    shell = 'cd ' + blog_path + ' && ' +  'git add --all' + ' && ' +  'git commit -m "add photos"' + ' && ' + 'git push'
-
-    os.system(shell)
-
 def cosupload_operation(file_name, im_file_name):
-    """
-    cosupload 上传到 腾讯cos
-    """
-    print("cosupload" + " " + file_name + " " + cos_img + file_name)
-    print("cosupload" + " " + im_file_name + " " + cos_im_img + file_name)
-    # os.system("cosupload" + " " + file_name + " " + cos_img + file_name)
-    # os.system("cosupload" + " " + im_file_name + " " + cos_im_img + file_name)
-
-
-def blog_operation():
-    """
-    部署
-    blog shell 脚本：登录到服务器，打包
-    """
-
-    os.system("blog")
+    os.system("coscmd upload" + " " + file_name + " " + cos_img + file_name)
+    os.system("coscmd upload" + " " + im_file_name + " " + cos_im_img + file_name)
 
 
 if __name__ == "__main__":
@@ -139,6 +116,4 @@ if __name__ == "__main__":
     file_name = sys.argv[1]
     im_file_name = cut_photo(file_name)
     handle_photo(file_name)
-    git_operation()
     cosupload_operation(file_name, im_file_name)
-    blog_operation()
