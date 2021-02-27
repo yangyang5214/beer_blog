@@ -1,7 +1,7 @@
 ---
 title: java中优雅使用es
 date: 2019-07-13 19:49:31
-tags: es
+tags: [elasticsearch]
 ---
 
 > 记录一下。java 中使用 es. 比较好的方式（自我认为）。
