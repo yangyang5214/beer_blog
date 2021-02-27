@@ -4,9 +4,7 @@ tags: [tools]
 date:  2018-12-31 12:00:00
 ---
 
-
 > 自己在用的插件记录
-
 
 ### [Isometric Contributions](https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien/related)
 
@@ -36,23 +34,16 @@ Replace new tab page with a personal dashboard featuring to-do, weather, and ins
 
 ### [JSON-handle](https://chrome.google.com/webstore/detail/json-handle/iahnhfdhidomcpggpaimmmahffihkfnj)
 
-
 json  可视化
 
 ![](https://beer-1256523277.cos.ap-shanghai.myqcloud.com/blog/json-handle.gif
 )
 
+### [XPath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl)
 
-### 图片助手(ImageAssistant)
+XPath Helper
 
-http://www.pullywood.com/antiADs/
+给不会  f12 的小白用。。。
 
+![](https://beef-1256523277.cos.ap-chengdu.myqcloud.com/bed/20210227181448.png)
 
-### 广告屏蔽
-
-https://adblockplus.org/zh_CN/
-
-
-### web 前端助手
-
-https://www.baidufe.com/fehelper/feedback.html
