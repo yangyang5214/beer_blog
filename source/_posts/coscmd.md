@@ -4,9 +4,10 @@ tags: tools
 date: 2018-12-30 14:00:00
 ---
 
-
 > [coscmd](https://cloud.tencent.com/document/product/436/10976#.E4.BD.BF.E7.94.A8.E7.8E.AF.E5.A2.83),腾讯cos 脚本操作
 
+
+update: 没什么用, 用 [PicGo](https://github.com/Molunerfinn/PicGo) 很方便
 
 ### 下载安装
 

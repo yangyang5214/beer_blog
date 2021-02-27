@@ -1,7 +1,7 @@
 ---
 title: java中的锁
 date: 2019-01-20 21:14:16
-tags: java
+tags: [java]
 ---
 
 ### lock接口

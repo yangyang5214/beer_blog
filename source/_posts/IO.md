@@ -1,6 +1,6 @@
 ---
 title: IO
-tags: java
+tags: [java]
 date: 2019-01-02 18:00:00
 ---
 

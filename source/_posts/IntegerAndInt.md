@@ -1,7 +1,7 @@
 ---
 title: Integer And int
 date: 2019-07-03 17:29:13
-tags: java
+tags: 【java】
 ---
 
 > An interesting bug for Integer with int.

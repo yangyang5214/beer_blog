@@ -1,7 +1,7 @@
 ---
 title: hexo_search_error
 date: 2019-01-20 17:37:31
-tags: hexo
+tags: [hexo, tools]
 ---
 
 > 发现 local_search 不能用了
