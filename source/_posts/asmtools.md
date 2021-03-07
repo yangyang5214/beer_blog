@@ -40,7 +40,7 @@ ant
 /Users/beer/code/asmtools-7.0-build/binaries/lib
 ```
 
-<!-more-->
+<!--more-->
 
 ### 用法
 
