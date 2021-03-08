@@ -53,7 +53,7 @@ Object.defineProperty(div, "id", {
 
 ```
 https://cq.mmiyue.com/zhenbuka/statics/js/fuck-debugger.js
-https://www.hexianwei.com/js/zhenbuka_fuck-debugger.js
+https://www.hexianwei.com/js-debug/zhenbuka_fuck-debugger.js
 ```
 
 然后就可以边看电视剧，边学习网站的 api 设计
@@ -122,7 +122,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a
 最终删除掉，最后几行，同样使用 ReRes插件替换加载的 js
 ```
 https://www.aqistudy.cn/js/jquery.min.js?v=1.1
-https://www.hexianwei.com/js/jquery.min.js?v=1.1
+https://www.hexianwei.com/js-debug/jquery.min.js?v=1.1
 ```
 
 运行，报错，缺少一些方法。（ jquery.min.js 文件 生成的一些方法吧）
